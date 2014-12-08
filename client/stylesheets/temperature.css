@@ -1,0 +1,23 @@
+.tempHead {
+  font-size: 30px;
+  margin-bottom: 50px;
+}
+
+.currentTemp {
+  font-size: 45px;
+  color: green;
+  font-weight: bold;
+}
+
+.rest {
+  margin-top: 150px;
+}
+
+.sub-temp {
+  color: #555;
+  font-size: 18px;
+}
+
+.muted {
+  color: #555;
+}

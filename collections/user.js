@@ -20,6 +20,10 @@ Schema.UserProfile = new SimpleSchema({
 });
 
 Schema.User = new SimpleSchema({
+    _id: {
+      type: String,
+      regEx: SimpleSchema.RegEx.Id
+    },
     emails: {
         type: [Object],
         // this must be optional if you also use other login services like facebook,
@@ -33,6 +37,12 @@ Schema.User = new SimpleSchema({
     "emails.$.verified": {
         type: Boolean
     },
+
+    username: {
+      type: String,
+      regEx: /^[a-z0-9A-Z_]{3,15}$/
+    },
+
     profile: {
         type: Schema.UserProfile,
         optional: true
