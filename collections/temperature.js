@@ -7,9 +7,6 @@ Schema.Temp = new SimpleSchema({
     type: Number,
     decimal: true
   },
-  user_id: {
-    type: String,
-  },
 	createdAt: {
 		type: Date,
 		autoValue: function() {
@@ -18,6 +15,12 @@ Schema.Temp = new SimpleSchema({
 			}
     }
 	},
+  user_id: {
+    type: String,
+  },
+  username: {
+    type: String
+  }
 });
 
 Temperature.attachSchema(Schema.Temp);

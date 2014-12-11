@@ -1,0 +1,15 @@
+<template name="myTempUsername">
+	<h1 class="tempHead text-center">My Temperature</h1>
+	<center>
+		<h3 class="currentTemp">{{firstTemp.value}} ºC</h3>
+		<p>
+			<mark><small>{{formatarData firstTemp.createdAt}}</small></mark>
+		</p>
+
+		<p class='rest'>
+			{{#each temperatures}}
+			<p><span class="sub-temp"><b>{{value}} ºC</b></span> (<span class="muted"><small>{{formatarData createdAt}}</small></span>)</p>
+			{{/each}}
+		</p>
+	</center>
+</template>
